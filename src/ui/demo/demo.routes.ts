@@ -3,14 +3,14 @@ import DemoHome from './demo-home.page.vue';
 
 const demoPages = import.meta.glob('../*/*.demo.vue');
 
-export const demoRoutes = Object.keys(demoPages).map((path) => {
-  const [, , fileName] = path.split('/');
-  const name = fileName.split('.').shift();
+export const demoRoutes = Object.keys(demoPages).map(async (demoComponentPath) => {
+  const [, , fileName] = demoComponentPath.split('/');
+  const demoComponentName = fileName.split('.').shift();
 
   return {
-    path: name,
-    name,
-    component: () => import(/* @vite-ignore */ path),
+    path: demoComponentName,
+    name: demoComponentName,
+    component: () => import(/* @vite-ignore */ demoComponentPath),
   } as RouteRecordRaw;
 });
 
