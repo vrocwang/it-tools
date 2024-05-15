@@ -87,6 +87,7 @@ tools:
     numbers: Numbers (123...)
     symbols: Symbols (!-;...)
     length: Length
+    customization: 'Customization'
     tokenPlaceholder: 'The token...'
     copied: Token copied to the clipboard
     button:

@@ -7,6 +7,7 @@ export function createToken({
   withSymbols = false,
   length = 64,
   alphabet,
+  withCustom,
 }: {
   withUppercase?: boolean
   withLowercase?: boolean
@@ -14,12 +15,14 @@ export function createToken({
   withSymbols?: boolean
   length?: number
   alphabet?: string
+  withCustom?:string
 }) {
   const allAlphabet = alphabet ?? [
     withUppercase ? 'ABCDEFGHIJKLMOPQRSTUVWXYZ' : '',
     withLowercase ? 'abcdefghijklmopqrstuvwxyz' : '',
     withNumbers ? '0123456789' : '',
     withSymbols ? '.,;:!?./-"\'#{([-|\\@)]=}*+' : '',
+    withCustom ? withCustom : '',
   ].join('');
 
   return shuffleString(allAlphabet.repeat(length)).substring(0, length);

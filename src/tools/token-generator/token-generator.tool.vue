@@ -9,6 +9,7 @@ const withUppercase = useQueryParam({ name: 'uppercase', defaultValue: true });
 const withLowercase = useQueryParam({ name: 'lowercase', defaultValue: true });
 const withNumbers = useQueryParam({ name: 'numbers', defaultValue: true });
 const withSymbols = useQueryParam({ name: 'symbols', defaultValue: false });
+const withCustom = useQueryParam({ name: 'withCustom', defaultValue: '' });
 const { t } = useI18n();
 
 const [token, refreshToken] = computedRefreshable(() =>
@@ -18,6 +19,7 @@ const [token, refreshToken] = computedRefreshable(() =>
     withLowercase: withLowercase.value,
     withNumbers: withNumbers.value,
     withSymbols: withSymbols.value,
+    withCustom: withCustom.value,
   }),
 );
 
@@ -51,6 +53,10 @@ const { copy } = useCopy({ source: token, text: t('tools.token-generator.copied'
         </div>
       </n-form>
 
+      <n-form-item :label="t('tools.token-generator.customization')" label-placement="left">
+       <n-input-text v-model:value="withCustom" placeholder="input custom symbols" />
+      </n-form-item>
+      
       <n-form-item :label="`${t('tools.token-generator.length')} (${length})`" label-placement="left">
         <n-slider v-model:value="length" :step="1" :min="1" :max="512" />
       </n-form-item>

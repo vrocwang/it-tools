@@ -86,6 +86,7 @@ tools:
     numbers: '数字 (123...)'
     symbols: '符号 (!-;...)'
     length: '长度'
+    customization: '自定义字符'
     tokenPlaceholder: '令牌...'
     copied: 复制到剪贴板
     button:
