@@ -54,7 +54,7 @@ const { copy } = useCopy({ source: token, text: t('tools.token-generator.copied'
       </n-form>
 
       <n-form-item :label="t('tools.token-generator.customization')" label-placement="left">
-       <n-input-text v-model:value="withCustom" placeholder="input custom symbols" />
+       <n-input v-model:value="withCustom" placeholder="input custom symbols" />
       </n-form-item>
       
       <n-form-item :label="`${t('tools.token-generator.length')} (${length})`" label-placement="left">
