@@ -9,7 +9,8 @@ const withUppercase = useQueryParam({ name: 'uppercase', defaultValue: true });
 const withLowercase = useQueryParam({ name: 'lowercase', defaultValue: true });
 const withNumbers = useQueryParam({ name: 'numbers', defaultValue: true });
 const withSymbols = useQueryParam({ name: 'symbols', defaultValue: false });
-const withCustom = useQueryParam({ name: 'withCustom', defaultValue: '' });
+/* const withCustom = useQueryParam({ name: 'withCustom', defaultValue: '' });*/
+const withCustom = ref('');
 const { t } = useI18n();
 
 const [token, refreshToken] = computedRefreshable(() =>
