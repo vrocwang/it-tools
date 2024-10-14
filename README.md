@@ -6,6 +6,10 @@
 
 Useful tools for developer and people working in IT. [Have a look !](https://it-tools.tech).
 
+## Sponsors
+
+[![Fern banner](./.github/fern-banner.svg)](https://bit.ly/3zBl7DG)
+
 ## Functionalities and roadmap
 
 Please check the [issues](https://github.com/CorentinTh/it-tools/issues) to see if some feature listed to be implemented.
@@ -117,7 +121,7 @@ Big thanks to all the people who have already contributed!
 
 ## Credits
 
-Coded with ❤️ by [Corentin Thomasset](//corentin-thomasset.fr).
+Coded with ❤️ by [Corentin Thomasset](https://corentin.tech?utm_source=it-tools&utm_medium=readme).
 
 This project is continuously deployed using [vercel.com](https://vercel.com).
 
